@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Designer - Nestory Design</title>
+  <link rel="stylesheet" href="Bookings.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo"> <img src="Images/Nestory.png" width="100px" height="100px"></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Designers.html">Designers</a></li>
+        <li><a href="Service.html">Services</a></li>
+        <li><a href="Pricing.html">Pricing</a></li>
+        <li><a href="Bookings.html">Bookings</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+
+  <!-- Page Title -->
+  <section class="page-title">
+    <h1>Book a Designer</h1>
+    <p>Schedule a consultation with our interior designers in Kampala</p>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section class="booking-section">
+    <form class="booking-form">
+      <label for="client-name">Full Name</label>
+      <input type="text" id="client-name" placeholder="Your Name" required>
+
+      <label for="client-email">Email</label>
+      <input type="email" id="client-email" placeholder="Your Email" required>
+
+      <label for="client-phone">Phone</label>
+      <input type="tel" id="client-phone" placeholder="Your Phone" required>
+
+      <label for="service">Select Service</label>
+      <select id="service" required>
+        <option value="">--Choose a Service--</option>
+        <option value="residential">Residential Design - UGX 1,500,000</option>
+        <option value="commercial">Commercial Design - UGX 3,000,000</option>
+        <option value="3d">3D Visualization - UGX 1,000,000</option>
+        <option value="space">Space Planning - UGX 800,000</option>
+      </select>
+
+      <label for="designer">Choose Designer</label>
+      <select id="designer" required>
+        <option value="">--Select Designer--</option>
+        <option value="jane">Jane Achieng</option>
+        <option value="michael">Michael Okello</option>
+        <option value="sarah">Sarah Nanyonga</option>
+        <option value="david">David Kato</option>
+      </select>
+
+      <label for="date">Select Date</label>
+      <input type="date" id="date" required>
+
+      <label for="price">Price (UGX)</label>
+      <input type="text" id="price" placeholder="Price will appear here" readonly>
+
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo"> <img src="Images/Nestory.png" width="100px" height="100px">
+         
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="C:\Users\Alameen Store\Desktop\Interior Design website\Index.html">Home</a></li>
+          <li><a href="C:\Users\Alameen Store\Desktop\Interior Design website\Designers.html">Designers</a></li>
+          <li><a href="C:\Users\Alameen Store\Desktop\Interior Design website\Service.html">Services</a></li>
+          <li><a href="C:\Users\Alameen Store\Desktop\Interior Design website\Pricing.html">Pricing</a></li>
+          <li><a href="C:\Users\Alameen Store\Desktop\Interior Design website\Bookings.html">Bookings</a></li>
+          <li><a href="C:\Users\Alameen Store\Desktop\Interior Design website\Contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <p>Email: info@nestory.com</p>
+        <p>Phone: +256 774 366 192</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p> 2025 Nestory Design. All rights reserved.</p>
+        <p>
+  <a href="https://www.linkedin.com/in/aida-haraz-0b88b1149?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+    Aida Haraz
+  </a>
+</p>
+    </div>
+  </footer>
+
+  <script>
+    // Dynamically update price based on selected service
+    const serviceSelect = document.getElementById('service');
+    const priceInput = document.getElementById('price');
+
+    const prices = {
+      residential: '1,500,000',
+      commercial: '3,000,000',
+      '3d': '1,000,000',
+      space: '800,000'
+    };
+
+    serviceSelect.addEventListener('change', () => {
+      const selected = serviceSelect.value;
+      priceInput.value = prices[selected] ? prices[selected] : '';
+    });
+  </script>
+</body>
+</html>
